@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObstaculoManager : MonoBehaviour
 {
     public GameObject ObjetoPrefab;
-    public float respawnTime = 0.5f;
+    //public float respawnTime = Random.Range(0.2f, 0.6f);
     public bool activarSpawn = true;
     private Vector2 screenbounds;
 
@@ -18,14 +18,14 @@ public class ObstaculoManager : MonoBehaviour
     private void SpawnObtaculo()
     {
         GameObject a = Instantiate(ObjetoPrefab) as GameObject;
-        a.transform.position = new Vector2(Random.Range(-screenbounds.x, screenbounds.x), screenbounds.y * -2);
+        a.transform.position = new Vector2(Random.Range(-6f, 6f), screenbounds.y * -2);
     }
 
     IEnumerator corrutinaSpawn()
     {
         while(activarSpawn)
         {
-            yield return new WaitForSeconds(respawnTime);
+            yield return new WaitForSeconds(Random.Range(0.5f, 0.75f));
             SpawnObtaculo();
         }
     }

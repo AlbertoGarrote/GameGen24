@@ -4,11 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class Timer : MonoBehaviour
 {
     public float timer = 0;
 
+    public static float puntuacion = 0;
+
     public TextMeshProUGUI textoTimerPro;
+
+    public TextMeshProUGUI textoPuntuacion;
 
     void Update()
     {
@@ -16,5 +21,6 @@ public class Timer : MonoBehaviour
             timer -= Time.deltaTime*13f;
             textoTimerPro.text = "" + timer.ToString("f0");
         }
+        textoPuntuacion.text = "" + puntuacion.ToString("f0");
     }
 }

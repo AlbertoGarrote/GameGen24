@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float xSpeed = 2;
+    public float xSpeed = 4;
 
     Rigidbody2D rb2d;
 
@@ -17,12 +17,12 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey("d"))
+        if (Input.GetKey("d") && transform.position.x < 5f)
         {
             rb2d.velocity = new Vector2(xSpeed, 0);
             spriteRenderer.flipX = false;
         } 
-        else if (Input.GetKey("a"))
+        else if (Input.GetKey("a") && transform.position.x > -5f)
         {
             rb2d.velocity = new Vector2(-xSpeed, 0); 
             spriteRenderer.flipX = true;
