@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -20,7 +20,12 @@ public class Timer : MonoBehaviour
         if(timer > 0){
             timer -= Time.deltaTime*13f;
             textoTimerPro.text = "" + timer.ToString("f0");
+            textoPuntuacion.text = "" + puntuacion.ToString("f0");
         }
-        textoPuntuacion.text = "" + puntuacion.ToString("f0");
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
     }
 }

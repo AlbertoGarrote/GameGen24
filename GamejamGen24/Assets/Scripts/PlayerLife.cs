@@ -18,8 +18,15 @@ public class PlayerLife : MonoBehaviour
     {
         if (collision.transform.CompareTag("ObstaculoMalo"))
         {
-            Timer.puntuacion += 1.0f;
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if(MenuNavegacion.modoDeJuego == 0)
+            {
+                Timer.puntuacion -= 11.0f;
+            }
+        }
+        if (collision.transform.CompareTag("ObstaculoBueno"))
+        {
+            Timer.puntuacion += 17.0f;
+
         }
     }
     

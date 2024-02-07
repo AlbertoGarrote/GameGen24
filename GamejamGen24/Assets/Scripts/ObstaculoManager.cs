@@ -25,7 +25,7 @@ public class ObstaculoManager : MonoBehaviour
     {
         while(activarSpawn)
         {
-            yield return new WaitForSeconds(Random.Range(0.5f, 0.75f));
+            yield return new WaitForSeconds(Random.Range(0.8f, 1.2f));
             SpawnObtaculo();
         }
     }
