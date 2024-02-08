@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Obstaculo2 : MonoBehaviour
 {
-    public float speed = 3.0f;
+    public float speed = 8.0f;
 
     private Rigidbody2D rb;
 
@@ -15,13 +15,14 @@ public class Obstaculo2 : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, speed);
         screenbounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(corrutinaMovimiento());
+
     }
 
     void Update()
     {
+        
         if (transform.position.y > screenbounds.y * 1.5f || transform.position.x > 6f || transform.position.x < -6f)
         {
             Destroy(this.gameObject);
@@ -30,11 +31,18 @@ public class Obstaculo2 : MonoBehaviour
 
     IEnumerator corrutinaMovimiento() 
     {
-        rb.velocity = new Vector2(-2, speed);
-        spriteRenderer.flipX = false;
-        yield return new WaitForSeconds(1f);
-        rb.velocity = new Vector2(2, speed);
+        rb.velocity = new Vector2(2f, speed);
         spriteRenderer.flipX = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(Random.Range(0.8f, 1.5f));
+        rb.velocity = new Vector2(-2f, speed);
+        spriteRenderer.flipX = false;
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

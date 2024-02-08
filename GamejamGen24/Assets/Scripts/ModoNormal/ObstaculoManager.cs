@@ -18,16 +18,16 @@ public class ObstaculoManager : MonoBehaviour
     private void SpawnObtaculo()
     {
         GameObject a = Instantiate(ObjetoPrefab) as GameObject;
-        a.transform.position = new Vector2(Random.Range(-6f, 6f), screenbounds.y * -2);
+        a.transform.position = new Vector2(Random.Range(-6f, 6f), screenbounds.y * -2);    
     }
 
     IEnumerator corrutinaSpawn()
     {
-        while(activarSpawn)
-        {
-            yield return new WaitForSeconds(Random.Range(0.8f, 1.2f));
-            SpawnObtaculo();
-        }
+       while (activarSpawn)
+       {
+           yield return new WaitForSeconds(Random.Range(0.6f, 1.2f));
+           SpawnObtaculo();
+       }
+        
     }
-
 }
