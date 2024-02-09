@@ -15,6 +15,14 @@ public class Timer : MonoBehaviour
 
     public TextMeshProUGUI textoPuntuacion;
 
+    public GameObject entrada;
+
+    public GameObject salida;
+
+    private void Start()
+    {
+        StartCoroutine(entrada1());
+    }
     void Update()
     {
         if(timer > 0){
@@ -24,8 +32,22 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            StartCoroutine(salida1());
         }
 
+    }
+
+    IEnumerator entrada1()
+    {
+        entrada.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        entrada.SetActive(false);
+    }
+    IEnumerator salida1()
+    {
+        salida.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        Cursor.visible = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

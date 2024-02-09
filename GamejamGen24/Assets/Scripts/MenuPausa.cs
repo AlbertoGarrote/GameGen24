@@ -38,7 +38,15 @@ public class MenuPausa : MonoBehaviour
         estaPausado = false;
         MenuPausaObj.SetActive(false);
         Time.timeScale = 1f;
+      
         Cursor.visible = false;
+    }
+    public void ResumeGamePRINCIPAL()
+    {
+        MenuPausaBoton.SetActive(true);
+        estaPausado = false;
+        MenuPausaObj.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void Salir()

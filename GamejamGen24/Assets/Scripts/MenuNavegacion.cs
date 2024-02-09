@@ -7,9 +7,20 @@ using UnityEngine.SceneManagement;
 public class MenuNavegacion : MonoBehaviour
 {
     public TextMeshProUGUI textoPuntuacion;
+
+    public GameObject entrada;
+
+    public GameObject salida;
+
+    private void Start()
+    {
+        StartCoroutine(entrada1());
+    }
+
     public void Jugar()
-  {
-        SceneManager.LoadScene(1);
+    {
+        StartCoroutine(salida1());
+        
 
     }
 
@@ -26,12 +37,32 @@ public class MenuNavegacion : MonoBehaviour
 
     public void Salir()
     {
-        Application.Quit();
-        Debug.Log("SALIR...");
+        StartCoroutine(salidaGeneral());
+        
     }
 
     void Update()
     {
         textoPuntuacion.text = "" + Timer.puntuacion.ToString("f0");
+    }
+
+    IEnumerator entrada1()
+    {
+        entrada.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        entrada.SetActive(false);
+    }
+    IEnumerator salida1()
+    {
+        salida.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(3);
+    }
+    IEnumerator salidaGeneral()
+    {
+        salida.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        Application.Quit();
+        Debug.Log("SALIR...");
     }
 }

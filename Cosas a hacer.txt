@@ -1,7 +1,4 @@
 - Modo infinito 
-- Animaciones entrada y salida 
-- Viñetas iniciales (Modo Normal) 
-- Mensaje iniciar el juego explicando modos de juego 
 - Música y sonidos de cuando pillas cosas 
 - Highscore
 - Escena Score

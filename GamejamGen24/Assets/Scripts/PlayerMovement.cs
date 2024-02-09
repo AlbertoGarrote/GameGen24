@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Cursor.visible = false;
         rb2d = GetComponent<Rigidbody2D>(); 
+
     }
 
     void FixedUpdate()
