@@ -12,18 +12,19 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false;
         rb2d = GetComponent<Rigidbody2D>(); 
     }
 
     void FixedUpdate()
     {
-        if (Input.GetKey("right") && transform.position.x < 5f)
+        if (Input.GetKey("d") && transform.position.x < 5f)
         {
             rb2d.velocity = new Vector2(xSpeed, 0);
             spriteRenderer.flipX = false;
             
         } 
-        else if (Input.GetKey("left") && transform.position.x > -5f)
+        else if (Input.GetKey("a") && transform.position.x > -5f)
         {
             rb2d.velocity = new Vector2(-xSpeed, 0); 
             spriteRenderer.flipX = true;

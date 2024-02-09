@@ -4,6 +4,7 @@
 - Mensaje iniciar el juego explicando modos de juego 
 - Música y sonidos de cuando pillas cosas 
 - Highscore
-- fondo escena principal y escena Score
+- Escena Score
 
 
+Skycomictrooper

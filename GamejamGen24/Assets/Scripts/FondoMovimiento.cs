@@ -13,7 +13,7 @@ public class FondoMovimiento : MonoBehaviour
     private void Awake()
     {
         material = GetComponent<SpriteRenderer>().material;
-        Cursor.visible = false;
+        
     }
 
     private void Update()

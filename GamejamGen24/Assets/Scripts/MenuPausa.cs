@@ -38,10 +38,12 @@ public class MenuPausa : MonoBehaviour
         estaPausado = false;
         MenuPausaObj.SetActive(false);
         Time.timeScale = 1f;
+        Cursor.visible = false;
     }
 
     public void Salir()
     {
+        Cursor.visible = true;
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }

@@ -15,7 +15,7 @@ public class Obstaculo3 : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(Random.Range(-4f, 7f), speed);
+        rb.velocity = new Vector2(Random.Range(-3f, 3f), speed);
         screenbounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }
 
