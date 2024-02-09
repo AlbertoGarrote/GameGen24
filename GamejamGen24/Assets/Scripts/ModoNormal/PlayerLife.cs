@@ -16,16 +16,22 @@ public class PlayerLife : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.CompareTag("ObstaculoMalo"))
+        if (collision.transform.CompareTag("NUBE"))
         {
-            if(MenuNavegacion.modoDeJuego == 0)
-            {
-                Timer.puntuacion -= 11.0f;
-            }
+            Timer.puntuacion -= 5.0f;
         }
-        if (collision.transform.CompareTag("ObstaculoBueno"))
+        else if (collision.transform.CompareTag("PALOMO"))
         {
-            Timer.puntuacion += 17.0f;
+            Timer.puntuacion -= 7.0f;
+        }
+        else if (collision.transform.CompareTag("OVNI"))
+        {
+            Timer.puntuacion -= 10.0f;
+        }
+
+        else if (collision.transform.CompareTag("ObstaculoBueno"))
+        {
+            Timer.puntuacion += 20.0f;
 
         }
     }

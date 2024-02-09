@@ -1,12 +1,9 @@
-- Modo infinito 2
-- Hacer dibujos de paneles laterales 4
-- Menú de pausa 5
+- Modo infinito 
 - Animaciones entrada y salida 
-- Arreglar Palomo 1
-- Fondo 3
-- Botones e initerfaz (menu pausa) 6
-- Viñetas iniciales (Modo Normal) 7
-- Mensaje iniciar el juego explicando modos de juego 8
-- Música y sonidos de cuando pillas cosas 9
+- Viñetas iniciales (Modo Normal) 
+- Mensaje iniciar el juego explicando modos de juego 
+- Música y sonidos de cuando pillas cosas 
+- Highscore
+- fondo escena principal y escena Score
 
 
