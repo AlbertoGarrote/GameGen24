@@ -3501,7 +3501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9031323650818856022, guid: 39845a63b555b5b49b0475edf335fee7, type: 3}
       propertyPath: timer
-      value: 1500
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 9031323650818856022, guid: 39845a63b555b5b49b0475edf335fee7, type: 3}
       propertyPath: salida

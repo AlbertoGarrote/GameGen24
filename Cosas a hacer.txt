@@ -1,7 +1,7 @@
 - Modo infinito 
 - Música y sonidos de cuando pillas cosas 
 - Highscore
-- Escena Score
+(bug dando pausa justo cuando cambias escena y no se ven puntos al final)
 
 
 Skycomictrooper

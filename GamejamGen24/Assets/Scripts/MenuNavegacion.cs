@@ -30,10 +30,7 @@ public class MenuNavegacion : MonoBehaviour
   
     }
 
-    public void VolverMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
+ 
 
     public void Salir()
     {
