@@ -8,8 +8,6 @@ public class MenuPausa : MonoBehaviour
     public GameObject MenuPausaObj;
     public GameObject MenuPausaBoton;
 
-    public bool estaPausado = false;
-
     void Start()
     {
         MenuPausaObj.SetActive(false);
@@ -17,7 +15,7 @@ public class MenuPausa : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && estaPausado == false)
+        if (Input.GetKeyDown(KeyCode.Escape) && Timer.cambioEscena == false && InfTimer.cambioEscena == false)
         {
             PauseGame();
         }
@@ -28,14 +26,12 @@ public class MenuPausa : MonoBehaviour
         MenuPausaBoton.SetActive(false);
         MenuPausaObj.SetActive(true);
         Time.timeScale = 0f;
-        estaPausado = true;
         Cursor.visible = true;
     }
 
     public void ResumeGame()
     {
         MenuPausaBoton.SetActive(true);
-        estaPausado = false;
         MenuPausaObj.SetActive(false);
         Time.timeScale = 1f;
       
@@ -44,7 +40,6 @@ public class MenuPausa : MonoBehaviour
     public void ResumeGamePRINCIPAL()
     {
         MenuPausaBoton.SetActive(true);
-        estaPausado = false;
         MenuPausaObj.SetActive(false);
         Time.timeScale = 1f;
     }

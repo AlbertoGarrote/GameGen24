@@ -9,15 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/LOGO.unity
     guid: 1dba6ac966414ca4c83546a64e6ae431
   - enabled: 1
-    path: Assets/Scenes/ESCENAinicial.unity
+    path: Assets/Scenes/Vinyetas.unity
     guid: d16dd138557177b46b44da9110fbc7e9
   - enabled: 1
-    path: Assets/Scenes/escena1.unity
+    path: Assets/Scenes/MenuInicial.unity
     guid: 7a8b0b8e5e110dd4d833c52f0280070b
   - enabled: 1
-    path: Assets/Scenes/juego.unity
+    path: Assets/Scenes/juegoNormal.unity
     guid: 43d2e216f530ab74fb34bf6a521536a9
   - enabled: 1
-    path: Assets/Scenes/scene1Fin.unity
+    path: Assets/Scenes/FinalModoNormal.unity
     guid: 151ff3aec944ce046b1c66b7244e9e9a
+  - enabled: 1
+    path: Assets/Scenes/infMode.unity
+    guid: f3141c284f3c9594da8e7f698e89496e
+  - enabled: 1
+    path: Assets/Scenes/FinInfinito.unity
+    guid: 16e78f012d0f6184fa882a1386d8db1c
   m_configObjects: {}

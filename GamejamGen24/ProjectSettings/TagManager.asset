@@ -8,6 +8,7 @@ TagManager:
   - NUBE
   - OVNI
   - PALOMO
+  - matador
   layers:
   - Default
   - TransparentFX

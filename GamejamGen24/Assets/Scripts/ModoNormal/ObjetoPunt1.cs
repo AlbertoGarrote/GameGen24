@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjetoPunt1 : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class ObjetoPunt1 : MonoBehaviour
     private Rigidbody2D rb;
 
     private Vector2 screenbounds;
+
+    public AudioClip Estrtelloclip;
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -26,7 +29,9 @@ public class ObjetoPunt1 : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
+            ControladorSonido.Instance.EjecutarSonido(Estrtelloclip);
             Destroy(this.gameObject);
         }
     }
+
 }

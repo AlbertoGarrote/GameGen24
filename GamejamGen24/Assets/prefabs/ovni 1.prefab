@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   spriteRenderer: {fileID: 370959738944102603}
+  ovni: {fileID: 8300000, guid: 9a54086c8160050448f06629b19434da, type: 3}
 --- !u!50 &7918203573537778553
 Rigidbody2D:
   serializedVersion: 4

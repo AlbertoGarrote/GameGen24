@@ -12,6 +12,8 @@ public class Obstaculo2 : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
+    public AudioClip palomo;
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -42,6 +44,7 @@ public class Obstaculo2 : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
+            ControladorSonido.Instance.EjecutarSonido(palomo);
             Destroy(this.gameObject);
         }
     }

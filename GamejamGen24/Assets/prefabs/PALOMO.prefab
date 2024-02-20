@@ -207,3 +207,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   spriteRenderer: {fileID: 5232544392327770657}
+  palomo: {fileID: 8300000, guid: 16600d92bdb5cf34ab007d8125322e8e, type: 3}

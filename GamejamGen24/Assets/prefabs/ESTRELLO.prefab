@@ -207,3 +207,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  Estrtelloclip: {fileID: 8300000, guid: bf65ff8bd9d647a468ce0551760ad12f, type: 3}

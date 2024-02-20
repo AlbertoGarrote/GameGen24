@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,18 @@ public class EscenaScore : MonoBehaviour
     public GameObject entrada;
 
     public GameObject salida;
+
+    public AudioClip winwin;
+
+    public AudioClip salide;
+
+    public AudioClip metalPipe;
+
+    public TextMeshProUGUI textoPuntuacionFinal;
+
+    public GameObject TextoPuntuacionPanel;
+
+
     void Start()
     {
         StartCoroutine(EscenaFinal());
@@ -18,10 +31,15 @@ public class EscenaScore : MonoBehaviour
     IEnumerator EscenaFinal()
     {
         entrada.SetActive(true);
+        ControladorSonido.Instance.EjecutarSonido(salide);
         yield return new WaitForSeconds(1f);
         entrada.SetActive(false);
-        yield return new WaitForSeconds(1.7f);
+        ControladorSonido.Instance.EjecutarSonido(winwin);
+        TextoPuntuacionPanel.SetActive(true);
+        textoPuntuacionFinal.text = "" + Timer.puntuacionFinal.ToString("f0");
         TextoScore.SetActive(true);
+        yield return new WaitForSeconds(12f);
+        ControladorSonido.Instance.EjecutarSonido(metalPipe);
 
     }
     public void VolverAlMenu()

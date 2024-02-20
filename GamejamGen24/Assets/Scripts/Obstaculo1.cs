@@ -10,6 +10,8 @@ public class Obstaculo1 : MonoBehaviour
 
     private Vector2 screenbounds;
 
+    public AudioClip nube;
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -29,6 +31,7 @@ public class Obstaculo1 : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
+            ControladorSonido.Instance.EjecutarSonido(nube);
             Destroy(this.gameObject);
         }
     }

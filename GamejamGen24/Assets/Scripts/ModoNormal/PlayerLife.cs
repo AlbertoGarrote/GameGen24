@@ -7,33 +7,45 @@ using UnityEngine.SceneManagement;
 public class PlayerLife : MonoBehaviour
 {
     Rigidbody2D rb2d;
+
+    public static int ContadorVidas1;
+
+
     void Start()
     {
+        ContadorVidas1 = 0;
         rb2d = GetComponent<Rigidbody2D>();
+        Timer.puntuacion = 0;
     }
 
-    // Update is called once per frame
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.CompareTag("NUBE"))
-        {
-            Timer.puntuacion -= 5.0f;
-        }
-        else if (collision.transform.CompareTag("PALOMO"))
-        {
-            Timer.puntuacion -= 7.0f;
-        }
-        else if (collision.transform.CompareTag("OVNI"))
-        {
-            Timer.puntuacion -= 10.0f;
-        }
 
-        else if (collision.transform.CompareTag("ObstaculoBueno"))
+        if (Timer.cambioEscena == false)
         {
-            Timer.puntuacion += 20.0f;
+            if (Timer.cambioEscena == false)
+            {
+                if (collision.transform.CompareTag("NUBE"))
+                {
+                    Timer.puntuacion -= 5;
+                }
+                else if (collision.transform.CompareTag("PALOMO"))
+                {
+                    Timer.puntuacion -= 7;
+                }
+                else if (collision.transform.CompareTag("OVNI"))
+                {
+                    Timer.puntuacion -= 10;
+                }
 
+                else if (collision.transform.CompareTag("ObstaculoBueno"))
+                {
+                    Timer.puntuacion += 20;
+
+                }
+            }
         }
     }
-    
+
 }

@@ -12,6 +12,8 @@ public class Obstaculo3 : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
+    public AudioClip ovni;
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -30,6 +32,7 @@ public class Obstaculo3 : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
+            ControladorSonido.Instance.EjecutarSonido(ovni);
             Destroy(this.gameObject);
         }
     }
